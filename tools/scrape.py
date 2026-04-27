@@ -96,3 +96,5 @@ def scrape_search_results(search_results: list) -> list:
     )
 
     logger.info("Scraped all URLs")
+
+    return documents

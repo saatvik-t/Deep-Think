@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 import logging
 from tavily import TavilyClient
-from langchain.tools import tool
 
 load_dotenv()
 
@@ -11,7 +10,6 @@ logger = logging.getLogger(__name__)
 tavily_api = os.getenv("TAVILY_API_KEY")
 tavily_client = TavilyClient(tavily_api)
 
-@tool
 def web_search(query : str) -> list :
     """
     Searches through the internet to fetch reliable information for a user query.
